@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/scrnsaver.h>
 
@@ -24,7 +23,7 @@ int main(int argc, char *argv[]) {
 	XScreenSaverSelectInput(display, DefaultRootWindow(display), ScreenSaverNotifyMask | ScreenSaverCycleMask);
 	
 	int previous_state = -1;
-	while (true) {
+	while (1) {
 		XScreenSaverInfo info;
 		if (!XScreenSaverQueryInfo(display, DefaultRootWindow(display), &info)) {
 			fprintf(stderr, "Couldn't query screen saver info!\n");
