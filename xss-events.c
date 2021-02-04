@@ -44,6 +44,8 @@ int main(int argc, char *argv[]) {
 					printf("disabled\n");
 					break;
 			}
+			
+			fflush(stdout);
 		}
 		
 		XEvent event;
